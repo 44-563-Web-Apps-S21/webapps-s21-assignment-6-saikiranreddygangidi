@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>
+         This is hidden webpage
+     </title>
+ </head>
+<body>
+<h1>Hidden things by Saikiran Reddy Gangidi</h1>
+<h2>Getting input</h2>
+
+<form>
+    <label for="form_pass">Enter the secret word </label>
+    <input type ="password" id="form_sec" name="form_secret" value="Secret"> <br>
+
+    <label for="form_guess">Enter a guess </label>
+    <input type ="text" id="form_guess" name="form1_guess"> <br>
+
+    <input type="button" onclick="processGuess()" value="Check the guess">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+<div class="container">
+    <img src="image1.jpg" id="img" onclick="rotateImage()" width="200px" height="200px">
+</div>
+<script> 
+var correct = 0;
+var wrong = 0;
+var currentImage = 0;
+
+function processGuess(){
+    console.log("Getting form values")
+    secret = document.getElementById("form_sec").value
+    guess = document.getElementById("form_guess").value
+    out = document.getElementById("result")
+    if(secret == guess){
+        correct=correct+1;
+        alert("Congratulations");
+        out.innerHTML = "correct values is"+correct
+    }else{
+         wrong=wrong+1;
+         alert("Sorry");
+         out.innerHTML = "wrong values is"+wrong
+    }
+}
+function rotateImage(){
+switch (currentImage) {
+  case 0:
+  document.getElementById("img").src = "image1.jpg";
+  currentImage =1;
+    break;
+  case 1:
+  document.getElementById("img").src = "image2.jpg";
+  currentImage=2;
+    break;
+  case 2:
+  document.getElementById("img").src = "image3.jpg";
+  currentImage=0;
+    break;
+  default:
+  document.getElementById("img").src = "image1.jpg";
+}
+
+
+}
+</script>
+
+</body>
+</html> 
