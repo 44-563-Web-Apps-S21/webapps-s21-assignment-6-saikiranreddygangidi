@@ -16,17 +16,20 @@
 <h2>Getting input</h2>
 
 <form>
+  <div class="form-group">
     <label for="form_pass">Enter the secret word </label>
     <input type ="password" id="form_sec" name="form_secret" value="Secret"> <br>
-
+</div>
+<div class="form-group">
     <label for="form_guess">Enter a guess </label>
     <input type ="text" id="form_guess" name="form1_guess"> <br>
+</div>
 
-    <input type="button" onclick="processGuess()" value="Check the guess">
+    <input type="button" onclick="processGuess()" value="Check the guess" class="btn btn-primary">
 </form>
 
 
-<p id="result">This text will be replaced </p>
+<p id="result" class="card" style="width: 24rem; margin:30px;text-align: center;">This text will be replaced </p>
 <div class="container">
     <img src="image1.jpg" id="img" onclick="rotateImage()" width="200px" height="200px">
 </div>

@@ -16,34 +16,44 @@
 <h1>
     Saikiran Reddy Gangidi builds a bear
 </h1>
-<form>
-    <input type="checkbox"   class="form-check-input" id="cb1_hat" name="cb1_hat"   
+
+<div class="container">
+<div class="row">
+<form class="card" style="width: 24rem; padding:20px;">
+    <div class="form-group">
+    <input type="checkbox"    id="cb1_hat" name="cb1_hat"   
       value="hat" >
-    <label for="cb1_hat">hat</label></br>
-  
-    <input type="checkbox"  class="form-check-input"  id="cb1_scarf" name="cb1_scarf" 
+    <label for="cb1_hat">hat</label>
+</div>
+    <div class="form-group" >
+    <input type="checkbox"  id="cb1_scarf" name="cb1_scarf" 
        value="scarf">
     <label for="cb1_scarf">scarf</label></br>
-  
-    <input type="checkbox"  class="form-check-input"  id="cb1_shirt" name="cb1_shirt"   
+    </div>
+    <div class="form-group">
+    <input type="checkbox"   id="cb1_shirt" name="cb1_shirt"   
        value="shirt" >
     <label for="cb1_shirt">shirt</label></br>
-
-    <input type="button" class="form-check-input"   onclick="startbear()" value="Start a bear">
+    </div>
+    <input type="button"  onclick="startbear()" value="Start a bear" class="btn btn-primary">
   </form>
-  
-  <form>
+</div>
+<br>
+<div class="row">
+  <form class="card" style="width: 24rem; padding:20px;">
+    <div class="form-group">
     <label for="form2_pro">Enter a property</label>
-    <input type ="text" id="form2_pro" name="form2_pro" value="color"> <br>
-
-    <label for="form2_value">Enter a value. </label>
+    <input type ="text" id="form2_pro" name="form2_pro" value="color"> 
+    </div>
+    <div class="form-group">
+    <label for="form2_value">Enter a value   </label>
     <input type ="text" id="form2_value" name="form2_value"> <br>
-
-    <input type="button" onclick="updatebear()" value="Update the bear">
+</div>
+    <input type="button" onclick="updatebear()" value="Update the bear" class="btn btn-primary">
 </form>
-
-
-<p id="result">This text will be replaced </p>
+</div>
+</div>
+<p id="result" class="card" style="width: 24rem; margin:30px;text-align: center;" >This text will be replaced </p>
 
 <script> 
 var my_bear={};
